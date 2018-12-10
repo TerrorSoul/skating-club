@@ -1,0 +1,4 @@
+<!--pages/activities/yuanzheng.wxml-->
+<import src='dailyactivities.wxml' />
+<template is='activities' data='{{ ...item }}' />
+<template is='activity' data='{{ ...activitykind[activityindex] }}' />

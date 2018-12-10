@@ -1,0 +1,30 @@
+<!--pages/fangkuai/fangkuai.wxml-->
+<view class='game' wx:if='{{ isGaming }}'>
+    <view style='display:flex'>速度：{{ curSpeed }}</view>
+    <view style='display:flex'>最高积分：{{ maxScore }}</view>
+    <view style='display:flex'>当前积分：{{ curScore }}</view>
+</view>
+<canvas bindtap='toAside' bindlongpress='begingame' canvas-id='fangkuai' style='width:{{ width }}px; height:{{ height }}px;border-top: 2rpx solid;border-bottom: 2rpx solid' wx:if='{{ isGaming }}'></canvas>
+<view wx:if='{{ isGaming }}'>
+    <view class='game controlButton'>
+        <view style='width:80%'>
+            <button bindtouchstart='toLeftPlain' bindtap='moveLeft' bindlongpress='goLeft' bindtouchend='noLeft' disabled='{{ !isPlaying }}' type='{{ controlType }}' plain='{{ leftPlain }}'>左移</button>
+        </view>
+        <view style='width:100%'>
+            <button style='border-right:#ffffff dashed 1px;border-left:#ffffff dashed 1px' bindtouchstart='toRotatePlain' bindtap='rotate' bindlongpress='goRotate' bindtouchend='noRotate' disabled='{{ !isPlaying }}' type='{{ controlType }}' plain='{{ rotatePlain }}'>旋转</button>
+        </view>
+        <view style='width:80%'>
+            <button bindtouchstart='toRightPlain' bindtap='moveRight' bindlongpress='goRight' bindtouchend='noRight' disabled='{{ !isPlaying }}' type='{{ controlType }}' plain='{{ rightPlain }}'>右移</button>
+        </view>
+    </view>
+    <button bindtouchstart='toBottomPlain' bindtap='goBottom' disabled='{{ !isPlaying }}' type='{{ controlType }}' plain='{{ bottomPlain }}'>置底</button>
+</view>
+
+<view wx:else style='height:{{ height }}px;display:flex;flex-direction:column;justify-content:center'>
+    <view style='display:flex;margin-bottom: 50rpx'>
+        <button bindtap='begingame'>开始游戏</button>
+    </view>
+    <view style='display:flex;margin-top: 50rpx'>
+        <button bindtap='clearStorage'>清空记录</button>
+    </view>
+</view>

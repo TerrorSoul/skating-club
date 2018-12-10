@@ -1,0 +1,63 @@
+/* pages/skate/abstract.wxss */
+
+page {
+    background-image: url(https://skating-1256514671.cos.ap-beijing.myqcloud.com/%E6%B6%82%E9%B8%A6.jpg);
+    background-repeat: repeat-y;
+    background-size: 100% auto;
+    background-attachment: scroll;
+}
+
+.backview {
+    background-color: rgba(230, 25, 25, 0.8);
+    width: 100%;
+}
+
+.tititem {
+    text-align: center;
+    margin: 30rpx;
+    color: white;
+    background-color: rgba(255, 0, 0, 0.7);
+    font-size: x-large;
+}
+
+.nameitem {
+    text-align: center;
+    font-size: small;
+    color: rgb(200, 200, 200);
+    margin-bottom: 20rpx;
+}
+
+.txtitem {
+    color: white;
+    font-size: medium;
+    margin-left: 20rpx;
+    margin-right: 20rpx;
+}
+
+.bordview {
+    margin: 20rpx;
+    border: 3rpx white dotted;
+    border-radius: 20rpx;
+}
+
+.textitem {
+    color:white;
+    font-size:large;
+    margin-left: 20rpx;
+    margin-right: 20rpx;
+    padding-left:15rpx;
+}
+
+.text1item {
+    margin-top: 15rpx;
+    padding-bottom:10rpx;
+    padding-top:5rpx;
+    border-left:8rpx white solid;
+}
+
+.text2item {
+    margin-bottom: 15rpx;
+    padding-top:10rpx;
+    padding-bottom:5rpx;
+    border-left:5rpx white solid;
+}

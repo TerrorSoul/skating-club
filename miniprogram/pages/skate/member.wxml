@@ -1,0 +1,43 @@
+<!--miniprogram/pages/skate/member.wxml-->
+<view wx:for='{{ members }}' wx:for-item='member' wx:for-index='index' wx:key='key' style='margin-bottom: 20rpx'>
+    <view class='inforow'>
+        <view style="color: {{ member.sex == '男' ? '#6699ff' : '#ff66ff' }}">{{ member.name }}</view>
+        <icon class='cdicon' type='cancel' bindtap='deletemember' data-member='{{ member }}' data-index='{{ index }}' wx:if='{{ nevermore }}'></icon>
+    </view>
+    <view class='inforow'>
+        <view class='inforow' style='width: 50%'>
+            <image class='cdicon' src='https://skating-1256514671.cos.ap-beijing.myqcloud.com/icon/academy.svg'></image>
+            <view>{{ xueyuan[member.academy] }}</view>
+        </view>
+        <view class='inforow' style='width: 50%'>
+            <image class='cdicon' src='https://skating-1256514671.cos.ap-beijing.myqcloud.com/icon/class.svg'></image>
+            <view>{{ nianji[member.class] }}</view>
+        </view>
+    </view>
+    <view class='inforow'>
+        <view class='inforow' style='width: 50%'>
+            <image class='cdicon' src='https://skating-1256514671.cos.ap-beijing.myqcloud.com/icon/wechat.svg'></image>
+            <view>{{ member.wechat }}</view>
+            <image class='copyicon' data-member='{{ member }}' bindtap='getwechat' src='https://skating-1256514671.cos.ap-beijing.myqcloud.com/icon/copy.svg'></image>
+        </view>
+        <view class='inforow' style='width: 50%'>
+            <image class='cdicon' src='https://skating-1256514671.cos.ap-beijing.myqcloud.com/icon/phone.svg'></image>
+            <view>{{ member.phone }}</view>
+            <image class='copyicon' data-member='{{ member }}' bindtap='getphone' src='https://skating-1256514671.cos.ap-beijing.myqcloud.com/icon/copy.svg'></image>
+        </view>
+    </view>
+    <view class='inforow' style='flex-wrap: wrap'>
+        <view class='inforow' style='width: 50%;'>
+            <image class='cdicon' src='https://skating-1256514671.cos.ap-beijing.myqcloud.com/icon/member.svg'></image>
+            <view>{{ member.member == '是' ? '成为干事' : '不当干事' }}</view>
+        </view>
+        <view class='inforow' style='width: 50%' wx:if='{{ member.department }}'>
+            <image class='cdicon' src='https://skating-1256514671.cos.ap-beijing.myqcloud.com/icon/department.svg'></image>
+            <view wx:for='{{ member.department }}' wx:key='key' wx:for-index='part'>{{ part == 1 ? '、' : ''}}{{ member.department[part] }}</view>
+        </view>
+        <view class='inforow' style='width: 50%'>
+            <image class='cdicon' src='https://skating-1256514671.cos.ap-beijing.myqcloud.com/icon/skate.svg'></image>
+            <view>{{ member.skate == '是' ? '玩过轮滑' : '没玩过轮滑' }}</view>
+        </view>
+    </view>
+</view>

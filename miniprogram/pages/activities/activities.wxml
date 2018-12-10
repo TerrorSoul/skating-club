@@ -1,0 +1,4 @@
+<!--pages/activities/activities.wxml-->
+<view class='contain' style='height: {{ height }}px;'>
+<image class='activitiesPhoto' style='margin-bottom: {{ index == 3 ? 50 : 0 }}rpx' wx:for='{{ activitiesPhotos }}' wx:key='activitiesPhotos' data-index='{{ index }}' src='{{ item }}' mode='aspectFill' bindtap='showActivities'></image>
+</view>

@@ -1,0 +1,24 @@
+{
+    "cloud": true,
+    "pages": [
+        "pages/index/index",
+        "pages/skate/abstract",
+        "pages/activities/expedition",
+        "pages/activities/dailyactivities",
+        "pages/activities/festivalactivities",
+        "pages/skate/join",
+        "pages/fangkuai/fangkuai",
+        "pages/album/album",
+        "pages/shoe/shoe",
+        "pages/activities/activities",
+        "pages/album/albums",
+        "pages/skate/minister",
+        "pages/skate/member"
+    ],
+    "window": {
+        "backgroundColor": "#c8c8c8",
+        "navigationBarBackgroundColor": "#000000",
+        "navigationBarTitleText": "风影轮滑社",
+        "enablePullDownRefresh": true
+    }
+}

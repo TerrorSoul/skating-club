@@ -1,0 +1,15 @@
+/* miniprogram/pages/skate/member.wxss */
+.inforow {
+    display: flex;
+    align-items: center;
+}
+
+.cdicon {
+    width: 50rpx;
+    height: 50rpx;
+}
+
+.copyicon {
+    width: 40rpx;
+    height: 40rpx;
+}

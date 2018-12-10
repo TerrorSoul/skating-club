@@ -1,0 +1,20 @@
+<!--pages/skate/minister.wxml-->
+<view wx:if="{{ minister }}" class='minister'>
+    将此页面转发给被邀请人即可
+    <button wx:if="{{ nevermore && !show }}" bindtap='showMinister'>查看部长团成员</button>
+    <button open-type='feedback' size='mini' type='primary' plain='{{ true }}' style='margin-top: 20rpx'>意见反馈</button>
+</view>
+<view wx:else class='minister'>
+    <input value='{{ name }}' bindinput='getname' placeholder='输入你的名字' class='getname'></input>
+    <button bindtap='beMinister' size='mini' type='primary'>确定</button>
+</view>
+<view wx:if="{{ show }}">
+    <view class='ministerInfos' style='border-top: black solid 1rpx;'>
+        <view class='ministerInfo' style='border-right: black solid 1rpx;'>名字</view>
+        <view class='ministerInfo'>邀请人</view>
+    </view>
+    <view wx:for="{{ ministers }}" wx:for-item='minister' wx:key='ministers' class='ministerInfos'>
+        <view class='ministerInfo' style='border-right: black solid 1rpx;'>{{ minister.name }}</view>
+        <view class='ministerInfo'>{{ minister.inviter }}</view>
+    </view>
+</view>

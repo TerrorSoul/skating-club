@@ -1,0 +1,64 @@
+/* pages/skate/join.wxss */
+
+.titleLine {
+    width: 100%;
+    text-align: center;
+    margin-top: 20rpx;
+    font-size: x-large;
+    font-family: 楷体;
+    color: rgb(50, 50, 50);
+    text-shadow: 5rpx 5rpx 10rpx;
+}
+
+.cdicon {
+    width: 50rpx;
+    height: 50rpx;
+}
+
+.horview {
+    margin-top: 20rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.verview {
+    display: flex;
+    flex-direction: column;
+    margin: 10rpx;
+}
+
+.inview {
+    width: 60%;
+    border-style: inset;
+    border-radius: 10rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.choose {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.naview {
+    width: 30%;
+    height: 50rpx;
+    border-style: outset;
+    border-radius: 10rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.members {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25%;
+    height: 50rpx;
+}

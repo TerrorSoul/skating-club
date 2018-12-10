@@ -1,0 +1,22 @@
+<!--index.wxml-->
+<view class='containView' style='height: {{ screenHeight }}px'>
+    <view class='item' hover-class='markPic'>
+        <image bindlongpress='playfangkuai' bindtap='showAlbum' class='mark' src='https://skating-1256514671.cos.ap-beijing.myqcloud.com/%E9%A3%8E%E5%BD%B1%E6%A0%87%E5%BF%97.jpg'></image>
+    </view>
+    <view class='womentxt'>
+        <view class='txtitem' bindtap='showActivities' hover-class='hoveritem'>了解我们</view>
+        <view wx:if="{{ minister }}" class='txtitem'>
+            <navigator url='/pages/skate/minister'>邀请部长</navigator>
+        </view>
+        <view class='txtitem' bindtap='joinus' bindlongpress='buyshoe' hover-class='hoveritem'>加入我们
+        </view>
+    </view>
+    <view style='display:flex;flex-direction: column;justify-content: flex-end; height: 30%'>
+        <view class='item1'>
+            对外经济贸易大学风影轮滑社
+        </view>
+        <view class='item1'>
+            <navigator url='/pages/skate/abstract'>简介></navigator>
+        </view>
+    </view>
+</view>

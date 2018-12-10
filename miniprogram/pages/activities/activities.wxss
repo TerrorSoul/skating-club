@@ -1,0 +1,15 @@
+/* pages/activities/activities.wxss */
+.contain {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-left: 50rpx;
+    padding-right: 50rpx;
+}
+
+.activitiesPhoto {
+    margin-top: 50rpx;
+    border-radius: 50rpx;
+    width: 650rpx;
+    box-shadow: 10rpx 10rpx 20rpx 0rpx hsla(0, 0%, 0%, 0.5);
+}

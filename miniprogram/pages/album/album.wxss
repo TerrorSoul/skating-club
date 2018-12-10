@@ -1,0 +1,59 @@
+/* pages/album/album.wxss */
+
+.timeLine {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-item: center;
+    clear: both;
+    margin: 10rpx;
+}
+
+.naview {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.cdicon {
+    width: 50rpx;
+    height: 50rpx;
+}
+
+.iconContain {
+    position: absolute;
+    bottom: 8rpx;
+    right: 0rpx;
+}
+
+.iconLine {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 30%;
+}
+
+.controlAlbum {
+    position: absolute;
+    bottom: 0rpx;
+    height: 8%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0rpx 0rpx 20rpx 0rpx black;
+}
+
+.bottomMark {
+    display: flex;
+    height: 8%;
+    justify-content: center;
+    align-items: center;
+}
+
+.conAlbum {
+    box-shadow: 0rpx 0rpx 20rpx 10rpx white;
+    background-color: white;
+}

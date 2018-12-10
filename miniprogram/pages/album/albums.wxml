@@ -1,0 +1,12 @@
+<!--pages/album/albums.wxml-->
+<modal id="modal" wx:if="{{ addAlbum }}" title="相册名称" bindcancel="cancel" bindconfirm="confirm">
+    <input style='border:black dotted 1rpx' bindinput='getname'></input>
+</modal>
+<view wx:if="{{ minister }}" class='album' style='width: {{ width }}px; height: {{ width }}px;background-color:#f1f2f6;border-radius: 20rpx;' bindtap='addAlbum'>
+    <image style='width: 100rpx; height: 100rpx; ' src='https://skating-1256514671.cos.ap-beijing.myqcloud.com/icon/add.svg' mode='aspectFill'></image>
+    <view style='width: 100%;text-align: center'>新建相册</view>
+</view>
+<view class='album' wx:for='{{ albums }}' wx:key='{{ albums }}' wx:for-item='album' bindtap='showAlbum' data-index='{{ index }}'>
+    <image style='width: {{ width }}px; height: {{ width }}px; border-radius: 20rpx;' src='{{ album.cover }}' mode='aspectFill'></image>
+    <view style='width: 100%;text-align: center'>{{ album.name }}</view>
+</view>

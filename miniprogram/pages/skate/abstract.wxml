@@ -1,0 +1,19 @@
+<!--pages/skate/abstract.wxml-->
+<view class='tititem'>风影轮滑社</view>
+<swiper style='height: 500rpx' indicator-dots='{{ true }}' autoplay='{{ true }}' circular='{{ true }}' skip-skip-hidden-item-layout='{{ true }}' previous-margin='50rpx' next-margin='50rpx' bindchange='changename'>
+    <swiper-item wx:for='{{ presidents }}' wx:key='key'>
+        <image style='height: 500rpx; width:100%' src='{{ item.photo }}' mode='aspectFill'></image>
+    </swiper-item>
+</swiper>
+<view class='backview'>
+    <view class='nameitem'>{{ presidents[index].name }}</view>
+    <view class='txtitem' style='text-indent: 2pc; line-height: 50rpx'>没有翅膀的天空，我们用轮子飞翔。疯狂青春，自由轮滑。</view>
+    <view class='txtitem' style='text-align: right'>——风影轮滑</view>
+    <view class='bordview'>
+        <view class='textitem text1item' >风影简介</view>
+        <view class='textitem text2item' style='border-left:2rpx white solid;'>风影轮滑社成立于2004年，发展至今已有十多年，之间既有过巅峰时期，也有过沉寂时期。在李竞翔、余昊宸等十多届社长的共同努力下，风影正在逐渐成长。现在已达到每年招新近200、在校人数达900+的规模，并成为贸大最受欢迎的社团之一。我们将热血洒在这里，将青春留在这里，多少次的努力付出，多少次的心心念念，造就了如今不断成长的轮滑社。</view>
+    </view>
+</view>
+<view style='text-align:center'>
+    <video src='https://skating-1256514671.cos.ap-beijing.myqcloud.com/%E9%A3%8E%E5%BD%B1%E7%BB%8F%E5%85%B8.mp4' show-progress='{{ true }}' objectFit='fill' style='width:100%'></video>
+</view>

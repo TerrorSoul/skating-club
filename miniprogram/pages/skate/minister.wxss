@@ -1,0 +1,28 @@
+/* pages/skate/minister.wxss */
+
+.minister {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.ministerInfos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    border-bottom: black solid 1rpx;
+}
+
+.ministerInfo {
+    width: 50%;
+}
+
+.getname {
+    height: 100rpx;
+    border-bottom: black solid 1rpx;
+    margin-bottom: 20rpx;
+}

@@ -1,0 +1,83 @@
+<!--pages/skate/join.wxml-->
+<view class='titleLine'>风影轮滑社会员报名表</view>
+<form bindsubmit='formsubmit' class='verview'>
+    <view class='horview'>
+        <view class='naview'>姓名：</view>
+        <view class='inview'>
+            <image class='cdicon' src='https://skating-1256514671.cos.ap-beijing.myqcloud.com/icon/name.svg'></image>
+            <input id='name' style='width:100%' confirm-type='next' name='name'></input>
+        </view>
+    </view>
+    <view class='horview'>
+        <view class='naview'>性别：</view>
+        <view class='inview'>
+            <image class='cdicon' src='https://skating-1256514671.cos.ap-beijing.myqcloud.com/icon/sex.svg'></image>
+            <radio-group class='choose' name='sex'>
+                <radio checked='{{ true }}' color='#ff66ff' value='女'>女</radio>
+                <radio color='#6699ff' value='男'>男</radio>
+            </radio-group>
+        </view>
+    </view>
+    <view class='horview'>
+        <view class='naview'>学院：</view>
+        <view class='inview'>
+            <image class='cdicon' src='https://skating-1256514671.cos.ap-beijing.myqcloud.com/icon/academy.svg'></image>
+            <picker style='width:100%' bindchange='binPickChange' range='{{ xueyuan }}' value='{{ index }}' name='academy'>{{ xueyuan[index] }}</picker>
+        </view>
+    </view>
+    <view class='horview'>
+        <view class='naview'>年级：</view>
+        <view class='inview'>
+            <image class='cdicon' src='https://skating-1256514671.cos.ap-beijing.myqcloud.com/icon/class.svg'></image>
+            <picker style='width:100%' bindchange='binnianji' range='{{ nianji }}' value='{{ index1 }}' name='class'>{{ nianji[index1] }}</picker>
+        </view>
+    </view>
+    <view class='horview'>
+        <view class='naview'>微信号：</view>
+        <view class='inview'>
+            <image class='cdicon' src='https://skating-1256514671.cos.ap-beijing.myqcloud.com/icon/wechat.svg'></image>
+            <input style='width:100%' confirm-type='next' name='wechat'></input>
+        </view>
+    </view>
+    <view class='horview'>
+        <view class='naview'>手机号码：</view>
+        <view class='inview'>
+            <image class='cdicon' src='https://skating-1256514671.cos.ap-beijing.myqcloud.com/icon/phone.svg'></image>
+            <input style='width:100%' type='number' confirm-type='next' name='phone'></input>
+        </view>
+    </view>
+    <view class='horview'>
+        <view class='naview'>成为干事：</view>
+        <view class='inview'>
+            <image class='cdicon' src='https://skating-1256514671.cos.ap-beijing.myqcloud.com/icon/member.svg'></image>
+            <radio-group class='choose' name='member' bindchange='choosedepartment'>
+                <radio color='green' value='是'>是</radio>
+                <radio color='OrangeRed' value='否'>否</radio>
+            </radio-group>
+        </view>
+    </view>
+    <view class='horview' wx:if='{{ choosing }}'>
+        <view class='naview'>选择部门：</view>
+        <view class='inview'>
+            <image class='cdicon' src='https://skating-1256514671.cos.ap-beijing.myqcloud.com/icon/department.svg'></image>
+            <checkbox-group class='choose' name='department'>
+                <checkbox value='宣传部'>宣传部</checkbox>
+                <checkbox value='生活部'>生活部</checkbox>
+            </checkbox-group>
+        </view>
+    </view>
+    <view class='horview'>
+        <view class='naview'>玩过轮滑：</view>
+        <view class='inview'>
+            <image class='cdicon' src='https://skating-1256514671.cos.ap-beijing.myqcloud.com/icon/skate.svg'></image>
+            <radio-group class='choose' name='skate'>
+                <radio value='是'>是</radio>
+                <radio value='否'>否</radio>
+            </radio-group>
+        </view>
+    </view>
+    <view class='horview' style='margin: 10rpx; border-top: 2rpx rgba(100, 100, 100, 0.7) solid;'>
+        <button style='width: 40%;margin:20rpx;' form-type='submit' size='mini' type='primary' plain='{{ true }}'>提交</button>
+        <button wx:if="{{ minister }}" style='width: 40%;margin:20rpx;' size='mini' type='primary' plain='{{ true }}' bindtap='getmember'>成员</button>
+    </view>
+</form>
